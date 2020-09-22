@@ -1,2 +1,2 @@
 # calculator
-pet-project
+Калькулятор, написанный с использованием JavaScript, HTML5, CSS3
