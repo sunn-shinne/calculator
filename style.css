@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #262B2B;
+    font-family: 'Noto Sans', 'Arial', sans-serif;
+}
+
+.content {
+    display: flex;
+    width: 1120px;
+    margin: auto;
+     
+}
+
+.calculator {
+    background-color: #5F787B;
+    width: 500px;
+    height: 600px;
+    box-shadow: 4px 4px 6px;
+    border: 2px solid #0D1011;
+    margin: 0px 30px 0px;
+}
+
+.text {
+    width: 440px;
+    height: 100px;
+}
+
+.textArea {
+    width: 442px;
+    height: 100px;
+    background-color: #E7E4E3;
+    margin: 33px 30px 467px;
+    resize: none;
+    color: #262B2B;
+    font-size: 50px;
+    text-align: right;
+    vertical-align : middle;
+    border: #0D1011;
+}
+
+.buttons {
+    width: 444px;
+    height: 402px;
+    margin: 30px;
+    margin-top: 60px; 
+}
+
+.button {
+    width: 88px;
+    height: 80px;
+    background-color: rgba(38, 43, 43, .6);
+    border: 1px solid rgba(13, 16, 17, .5);
+    color: #E7E4E3;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    outline: none;
+}
+
+.button:hover { background: rgba(38, 43, 43, .5);}
+.button:active { background: rgba(231, 228, 227, .1); }
+
+.number:hover { background: rgba(38, 43, 43, 0.1); }
+.number:active { background: rgba(231, 228, 227, .4); }
+
+.null {
+    width: 176px;
+}
+
+.equally {
+    height: 160px;
+    position: relative;
+    top: -80px;
+}
+
+.number {
+    background-color: rgba(38, 43, 43, .2);
+}
+
+.big {
+    font-size: 25px;
+}
+
+.extraCard {
+    background-color: #5F787B;
+    width: 280px;
+    height: 600px;
+    border: 2px solid #0D1011;
+    box-shadow: 4px 4px 6px;
+    position: relative;
+}
+
+.cardTitle {
+    color: #E7E4E3;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 0px;
+    font-weight: 100;
+}
+
+table {
+    color: #E7E4E3;
+    font-size: 17px; 
+    width: 270px;
+    height: 430px;
+    margin: 8px 5px 0px;
+    border-spacing: 20px 15px;
+}
+
+td {
+    vertical-align: top;
+}
+
+.more {
+    font-size: 21px;
+}
+
+.history {
+    height: 500px;
+    width: 276px;
+    margin-top: 0px;
+}
+
+.historyTable {
+    font-size: 20px;
+    display: table;
+    height: 440px;
+    width: 275px;
+    margin: 0px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    /*border-spacing: 0px;*/
+}
+
+
+.historyPoint {
+    padding-right: 35px;
+    vertical-align: middle;
+    text-align: right;
+    white-space: pre-wrap;
+    height: 45px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+/*.click:active { background: rgba(234, 179, 84, .7); }*/
+
+.clearHistory { 
+    
+    width: 130px;
+    height: 35px;
+    background-color: rgba(38, 43, 43, .2);
+    border: 1px solid rgba(13, 16, 17, .5);
+    color: #E7E4E3;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    margin: 17px 73px 30px;
+    transition: all 0.3s ease;
+}
+.clearHistory:hover { background: rgba(231, 228, 227, .1);}
+.clearHistory:active { background: rgba(234, 179, 84, .7); }
+
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="https://img.icons8.com/fluent/50/000000/calculator.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <section class="content">
+        <div class="extraCard leftCard animate__animated animate__fadeInLeft">
+            <h3 class="cardTitle">Функции кнопок</h3>
+            <table>
+                <tr>
+                  <td class="more">&#8592;</td>
+                  <td>стереть символ</td>
+                </tr>
+                <tr>
+                    <td>CE</td>
+                    <td>очищает текущее поле ввода</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>очищает текущее поле ввода и данные в памяти</td>
+                </tr>
+                <tr>
+                    <td>+/–</td>
+                    <td>меняет знак числа в поле ввода на противоположный</td>
+                </tr>
+                <tr>
+                    <td>1/x</td>
+                    <td>возводит число в поле ввода в степень -1 </td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>вычисляет заданную долю числа (20 % 5 = 1)</td>
+                </tr>
+                <tr>
+                    <td class="more">√</td>
+                    <td>вычисляет корень числа находящегося в поле ввода</td>
+                </tr>
+              </table>
+        </div>
+
+        <form class="calculator animate__animated animate__zoomIn">
+            <div class="text"><textarea class="textArea" disabled>0</textarea></div>
+            <div class="buttons">
+                <input class="button" type="button" value="&#8592;" onclick="backspase()">
+                <input class="button big" type="button" value="CE" onclick="textClear()">
+                <input class="button big" type="button" value="C" onclick="allTextClear()">
+                <input class="button big" type="button" value="+/-" onclick="operationUn('+/-')">
+                <input class="button big" type="button" value="1/x" onclick="operationUn('1/x')">
+
+                <input class="button number" type="button" value="7" onclick="numPressed(7)">
+                <input class="button number" type="button" value="8" onclick="numPressed(8)">
+                <input class="button number" type="button" value="9" onclick="numPressed(9)">
+
+                <input class="button" id="/" type="button" value="/" onclick="operationBin(value)">
+                <input class="button big" id="%" type="button" value="%"  onclick="operationBin(value)">
+
+                <input class="button number" type="button" value="4" onclick="numPressed(4)">
+                <input class="button number" type="button" value="5" onclick="numPressed(5)">
+                <input class="button number" type="button" value="6" onclick="numPressed(6)">
+
+                <input class="button" id="×" type="button" value="×" onclick="operationBin(value)">
+                <input class="button" type="button" value="&radic;" onclick="operationUn('radic')">
+
+                <input class="button number" type="button" value="1" onclick="numPressed(1)">
+                <input class="button number" type="button" value="2" onclick="numPressed(2)">
+                <input class="button number" type="button" value="3" onclick="numPressed(3)">
+
+                <input class="button" id="–" type="button" value="–" onclick="operationBin(value)">
+                
+                <input class="button null number" type="button" value="0" onclick="numPressed(0)">
+                <input class="button  number" type="button" value="." onclick="point()">
+                <input class="button" id="+" type="button" value="+" onclick="operationBin(value, name)">
+
+                <input class="button equally" type="button" value="=" onclick="operationBin('=')">
+            </div>         
+        </form>
+
+        <div class="extraCard rightCard animate__animated animate__fadeInRight">
+            <h3 class="cardTitle">Последние вычисления</h3>
+            
+            <div class="history">
+            <table class="historyTable">
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(0)" onmouseout="choosePoint(0, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(1)" onmouseout="choosePoint(1, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(2)" onmouseout="choosePoint(2, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(3)" onmouseout="choosePoint(3, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(4)" onmouseout="choosePoint(4, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(5)" onmouseout="choosePoint(5, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+                <tr class="pointOfList">
+                    <td class="historyPoint" onmouseover="choosePoint(6)" onmouseout="choosePoint(6, 0)" onclick="choosePastValue(this.innerText)"></td>
+                </tr>
+            </table>        
+            <input class="clearHistory" type="button" value="Очистить" onclick="clearHistory()">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
